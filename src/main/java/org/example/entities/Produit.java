@@ -1,6 +1,6 @@
-package entities;
+package org.example.entities;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.util.Objects;
 
@@ -22,9 +22,9 @@ public class Produit {
     @Basic
     @Column(name = "idCategorie")
     private int idCategorie;
-    @ManyToOne
-    @JoinColumn(name = "idCategorie", referencedColumnName = "idCat", nullable = false)
-    private Categorie categorieByIdCategorie;
+//    @ManyToOne
+//    @JoinColumn(name = "idCategorie", referencedColumnName = "idCat", nullable = false)
+//    private Categorie categorieByIdCategorie;
 
     public int getIdP() {
         return idP;
@@ -79,11 +79,11 @@ public class Produit {
         return Objects.hash(idP, libelleP, qteP, prixP, idCategorie);
     }
 
-    public Categorie getCategorieByIdCategorie() {
-        return categorieByIdCategorie;
-    }
-
-    public void setCategorieByIdCategorie(Categorie categorieByIdCategorie) {
-        this.categorieByIdCategorie = categorieByIdCategorie;
-    }
+//    public Categorie getCategorieByIdCategorie() {
+//        return categorieByIdCategorie;
+//    }
+//
+//    public void setCategorieByIdCategorie(Categorie categorieByIdCategorie) {
+//        this.categorieByIdCategorie = categorieByIdCategorie;
+//    }
 }

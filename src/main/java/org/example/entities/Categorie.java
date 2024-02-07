@@ -1,5 +1,6 @@
-package entities;
-import jakarta.persistence.*;
+package org.example.entities;
+import javax.persistence.*;
+
 import java.util.Objects;
 
 @Entity
